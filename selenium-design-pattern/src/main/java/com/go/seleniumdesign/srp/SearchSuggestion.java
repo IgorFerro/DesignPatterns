@@ -27,8 +27,7 @@ public class SearchSuggestion extends AbstractComponent {
 
 	@Override
 	public boolean isDisplayed() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.wait.until((d) -> this.suggestions.size() > 5);
 	}
 
 }
