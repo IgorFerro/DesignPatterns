@@ -9,8 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GoogleEnglish extends GooglePage {
 	
-	private WebDriver driver;
-	private WebDriverWait wait;
+	protected WebDriver driver;
+	protected WebDriverWait wait;
 	
 	
 	@FindBy(name="q")
