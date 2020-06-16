@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class GoogleEnglish extends GooglePage {
+   class GoogleEnglish extends GooglePage {
 	
 	protected WebDriver driver;
 	protected WebDriverWait wait;
