@@ -1,4 +1,4 @@
-package com.go.seleniumdesign.srp;
+package com.go.seleniumdesign.srp.common;
 
 import java.util.concurrent.TimeUnit;
 

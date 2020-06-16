@@ -1,4 +1,4 @@
-package com.go.seleniumdesign.srp;
+package com.go.seleniumdesign.srp.common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
