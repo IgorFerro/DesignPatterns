@@ -27,7 +27,8 @@ public class GoogleSearchTest extends BaseTest {
 			 return new Object[][] {
 				 {"ENG", "selenium"},
 				 {"FR", "desing patterns"},
-				 {"SA", "docker"}
+				 {"SA", "docker"},
+				 {"ES", "docker"}
 			 };
 		 }
 	
