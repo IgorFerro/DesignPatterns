@@ -10,6 +10,7 @@ import org.testng.collections.Maps;
 import com.go.seleniumdesign.strategy.CreditCard;
 import com.go.seleniumdesign.strategy.NetBanking;
 import com.go.seleniumdesign.strategy.PaymentOption;
+import com.go.seleniumdesign.strategy.PaymentOptionFactory;
 import com.go.seleniumdesign.strategy.PaymentScreen;
 import com.go.seleniumdesing.test.BaseTest;
 
@@ -24,10 +25,10 @@ public class PaymentScreenTest extends BaseTest{
 	}
 	
 	@Test(dataProvider = "getData")
-	public void paymentTest(PaymentOption paymentOption, Map<String, String> paymentDetails) {
+	public void paymentTest(String option, Map<String, String> paymentDetails) {
 		this.paymentScreen.goTo();
 		this.paymentScreen.getUserInformantion().enterDetails();
-		this.paymentScreen.setPaymentOption(paymentOption);
+		this.paymentScreen.setPaymentOption(PaymentOptionFactory.get(option));
 		this.paymentScreen.pay(paymentDetails);
 		this.paymentScreen.getOrder().placeOrder();
 		String orderNumber = this.paymentScreen.getOrder().placeOrder();
@@ -51,8 +52,8 @@ public class PaymentScreenTest extends BaseTest{
 		
 		
 		return new Object[][] {
-			{new CreditCard(), cc},
-			{new NetBanking(), nb}
+			{"CC", cc},
+			{"NB", nb}
 		};
 		
 	}

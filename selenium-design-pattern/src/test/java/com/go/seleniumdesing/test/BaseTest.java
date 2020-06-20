@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 
+
 import com.google.common.util.concurrent.Uninterruptibles;
 
 
@@ -16,13 +17,13 @@ public class BaseTest {
 	
 	@BeforeClass
 	public void setupDriver() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\ifparreira\\Desktop\\GeckoDriver");
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\ifparreira\\Desktop\\GeckoDriver\\geckodriver.exe");
 		this.driver = new FirefoxDriver();
 	}
-	
+	/*
 	@AfterTest
 	public void quitDriver() {
 		Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
 		this.driver.quit();
-	  }
+	  }*/
 	}
