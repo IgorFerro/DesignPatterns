@@ -21,6 +21,8 @@ public class UserInformation {
 	}
 	
 	public void enterDetails() {
-		
+		this.firstName.sendKeys("igor");
+		this.lastName.sendKeys("ferro");
+		this.email.sendKeys("igor@igor.com");
 	}
 }

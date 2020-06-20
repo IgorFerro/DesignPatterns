@@ -1,5 +1,7 @@
 package com.go.seleniumdesign.strategy;
 
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,6 +18,10 @@ public class PaymentScreen {
 		this.order = PageFactory.initElements(driver, Order.class);
 	}
 	
+	public void goTo() {
+		this.driver.get("https://vins-udemy.s3.amazonaws.com/ds/strategy.html");
+	}
+	
 	public UserInformation getUserInformantion() {
 		return userInformation;
 	}
@@ -29,8 +35,8 @@ public class PaymentScreen {
 		PageFactory.initElements(driver, this.paymentOption);
 	}
 	
-	public PaymentOption getPaymentOption() {
-		return paymentOption;
+	public void pay(Map<String, String>paymentDetails) {
+		this.paymentOption.enterPaymentInformation(paymentDetails);
 	}
 	
 
