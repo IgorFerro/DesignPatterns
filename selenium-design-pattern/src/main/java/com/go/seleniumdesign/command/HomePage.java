@@ -1,5 +1,9 @@
 package com.go.seleniumdesign.command;
 
+
+import java.util.Arrays;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -61,4 +65,27 @@ public class HomePage {
 		this.driver.get("https://www.wrappixel.com/demos/admin-templates/admin-pro/main/ui-notification.html");
 	}
 
+	
+	public List<ElementValidator> getElementValidators(){
+		
+		return Arrays.asList(
+		    
+			//Notification
+			new NotificationValidator(infoBtn,infoAlert),
+			new NotificationValidator(successBtn,successAlert),
+			new NotificationValidator(warnBtn,warningAlert),
+			new NotificationValidator(dangerBtn,dangerAlert),
+			
+			//Dismiss
+			new DismissAlertValidation(dismissInfoAlert),
+			new DismissAlertValidation(dismissSuccessAlert),
+			new DismissAlertValidation(dismissWarnAlert),
+			new DismissAlertValidation(dismissDangerAlert)
+		
+				
+				
+		);
+	
+		
+	}
 }

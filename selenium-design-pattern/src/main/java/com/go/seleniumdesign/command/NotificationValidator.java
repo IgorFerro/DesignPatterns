@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 
-public abstract class NotificationValidator extends ElementValidator {
+public  class NotificationValidator extends ElementValidator {
 	
 	
 	private final WebElement button;
