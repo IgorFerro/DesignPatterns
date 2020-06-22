@@ -30,6 +30,7 @@ public class HomePageTest extends BaseTest {
 		//JAVA 8
 		this.homepage.getElementValidators()
 		.stream()
+		.parallel()
 		.map(ev -> ev.validade())
 		.forEach(b -> Assert.assertTrue(b));
 	}
