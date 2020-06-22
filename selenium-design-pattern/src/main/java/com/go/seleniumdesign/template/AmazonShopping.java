@@ -15,7 +15,7 @@ public class AmazonShopping extends ShoppingTemplate {
 	@FindBy(id= "twotabsearchbox")
 	private WebElement searchBox;
 	
-	@FindBy(css = "inout.nav-input")
+	@FindBy(css = "input.nav-input")
 	private WebElement searchBtn;
 	
 	@FindBy(css = "span.a-size-medium")
