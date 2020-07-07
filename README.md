@@ -54,4 +54,21 @@ Applicability
  Use the pattern when your class has a massive conditional operator that switches between different variants of the same algorithm.
 
  The Strategy pattern lets you do away with such a conditional by extracting all algorithms into separate classes, all of which implement the same interface. The original object delegates execution to one of these objects, instead of implementing all variants of the algorithm.
+ 
+ ## Usage in Test Automation: 
+ Application provides multiple options to the user and based on the user selection, application executes the business rule slightly differently
+   -Google Search Strategy:
+       Text
+       Voice
+       Image
+   -Payment Options
+       Credit Card
+       Promocode
+       Bank Account
+       Ether Wallet
+   -Shiiping
+       Immediate Door delivery
+       2 Day Air Shipping
+       5 Day Ground Shipping
+ 
 
